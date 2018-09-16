@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQL8Dialect
+        </property>
+        <property name="hibernate.connection.serverTimezone">
+            UTC
+        </property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost/job_hibernate
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+
+        </property>
+        <property name="hibernate.show_sql">
+            true
+        </property>
+        <property name="generate_statistics">true
+        </property>
+        <property name="format_sql">
+            true
+        </property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="com.sda.hibernate.entity.Job"></mapping>
+        <mapping class="com.sda.hibernate.entity.Category"></mapping>
+        <mapping class="com.sda.hibernate.entity.Affiliate"></mapping>
+
+
+    </session-factory>
+</hibernate-configuration>
